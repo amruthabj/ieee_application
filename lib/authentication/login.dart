@@ -129,7 +129,7 @@ class _LoginPageState extends State<LoginPage> {
                     Text("Don't have an account?"),
                     TextButton(
                       onPressed: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                             context, MaterialPageRoute(builder: (context) => RegisterPage()));
                       },
                       child: Text('Sign Up', style: TextStyle(color: Colors.blue)),

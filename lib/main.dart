@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ieee_application/createEventScreen.dart';
+import 'package:ieee_application/upcomingEventsPage.dart';
 import 'authentication/login.dart';
 
 void main() {
@@ -9,7 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginPage(),
+      debugShowCheckedModeBanner: false,
+      home: CreateEventScreen(),
     );
   }
 }
