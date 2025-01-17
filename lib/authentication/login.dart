@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'signin.dart';
-import '../sqlite_files/user_database_helper.dart'; // Import the UserDatabaseHelper
-
+import '../sqlite_files/user_database_helper.dart';
+import 'package:ieee_application/createEventScreen.dart';
+import 'package:ieee_application/eventDetailsPage.dart';
+import 'package:ieee_application/upcomingEventsPage.dart';
+import 'package:ieee_application/home_page.dart';// Import the UserDatabaseHelper
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -25,6 +28,10 @@ class _LoginPageState extends State<LoginPage> {
       if (user != null && user['password'] == _passwordController.text.trim()) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Login Successful')),
+        );
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => HomeScreen()),
         );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
